@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
+
 
 const navLinks = [
   { name: "Services", href: "/#services" },
@@ -57,9 +59,7 @@ export function Navbar() {
       <div className="mx-auto max-w-5xl px-6">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
-            <span className={`font-serif text-lg tracking-tight transition-colors duration-500 ${scrolled ? "text-[#1a1f2e]/90" : "text-white/90"}`}>
-              Bluecrest
-            </span>
+            <Image src="/logo.png" alt="Bluecrest" width={120} height={40} className="object-contain" />
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">

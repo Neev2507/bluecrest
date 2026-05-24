@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Contact } from "@/components/contact"
+import Image from "next/image"
 
 const leadership = [
   { name: "Atharv Akhaury", title: "Chairman" },
@@ -38,7 +39,9 @@ function AboutNav() {
     }`}>
       <div className="mx-auto max-w-5xl px-6">
         <div className="flex h-16 items-center justify-between">
-          <Link href="/" className={`font-serif text-lg tracking-tight transition-colors duration-500 ${scrolled ? "text-[#1a1f2e]/90" : "text-white/90"}`}>Bluecrest</Link>
+          <Link href="/" className="flex items-center gap-2 group">
+            <Image src="/logo.png" alt="Bluecrest" width={120} height={40} className="object-contain" />
+          </Link>
           <div className="hidden lg:flex items-center gap-8">
             <Link href="/" className={`text-[13px] transition-colors duration-200 ${scrolled ? "text-[#1a1f2e]/40 hover:text-[#1a1f2e]/80" : "text-white/40 hover:text-white/80"}`}>Home</Link>
             <Link href="/about" className={`text-[13px] transition-colors duration-200 ${scrolled ? "text-[#1a1f2e]/80" : "text-white/80"}`}>About</Link>
