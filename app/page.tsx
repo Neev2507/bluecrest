@@ -57,9 +57,9 @@ export default function Page() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-[#14171f]">
+      <main className="min-h-screen bg-[#F5F5DC]">
         {/* Hero Section */}
-        <section className="relative pt-44 pb-40 px-6">
+        <section className="relative pt-44 pb-40 px-6 bg-[#1a1f2e]">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-[13px] text-white/30 mb-8 tracking-widest uppercase">
               Digital Media Agency
@@ -91,20 +91,20 @@ export default function Page() {
         </section>
 
         {/* Services Section */}
-        <section id="services" className="px-6 py-40 border-t border-white/[0.04]">
+        <section id="services" className="px-6 py-40 border-t border-[#1a1f2e]/[0.08]">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-[12px] text-white/25 mb-4 tracking-widest uppercase">What we do</p>
-            <h2 className="font-serif text-3xl sm:text-4xl text-white/90 tracking-tight mb-20">
+            <p className="text-[12px] text-[#1a1f2e]/50 mb-4 tracking-widest uppercase">What we do</p>
+            <h2 className="font-serif text-3xl sm:text-4xl text-[#1a1f2e]/90 tracking-tight mb-20">
               Services
             </h2>
 
             <div className="grid sm:grid-cols-2 gap-12 text-left">
               {services.map((service) => (
                 <div key={service.title} className="group">
-                  <h3 className="text-[15px] font-medium text-white/80 mb-3">
+                  <h3 className="text-[15px] font-medium text-[#1a1f2e]/80 mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-[14px] leading-relaxed text-white/35">
+                  <p className="text-[14px] leading-relaxed text-[#1a1f2e]/50">
                     {service.description}
                   </p>
                 </div>
@@ -114,10 +114,10 @@ export default function Page() {
         </section>
 
         {/* Work Section */}
-        <section id="work" className="px-6 py-40 border-t border-white/[0.04]">
+        <section id="work" className="px-6 py-40 border-t border-[#1a1f2e]/[0.08]">
           <div className="mx-auto max-w-4xl text-center">
-            <p className="text-[12px] text-white/25 mb-4 tracking-widest uppercase">Selected projects</p>
-            <h2 className="font-serif text-3xl sm:text-4xl text-white/90 tracking-tight mb-20">
+            <p className="text-[12px] text-[#1a1f2e]/50 mb-4 tracking-widest uppercase">Selected projects</p>
+            <h2 className="font-serif text-3xl sm:text-4xl text-[#1a1f2e]/90 tracking-tight mb-20">
               Recent work
             </h2>
 
@@ -131,8 +131,8 @@ export default function Page() {
                       className="w-full h-[260px] object-cover transition-all duration-500 group-hover:scale-[1.02] opacity-80 group-hover:opacity-100"
                     />
                   </div>
-                  <p className="text-[11px] text-white/25 mb-2 tracking-wide uppercase">{work.category}</p>
-                  <h3 className="text-[15px] text-white/60 group-hover:text-white/90 transition-colors duration-200">
+                  <p className="text-[11px] text-[#1a1f2e]/40 mb-2 tracking-wide uppercase">{work.category}</p>
+                  <h3 className="text-[15px] text-[#1a1f2e]/60 group-hover:text-[#1a1f2e]/90 transition-colors duration-200">
                     {work.title}
                   </h3>
                 </div>
@@ -142,30 +142,30 @@ export default function Page() {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="px-6 py-40 border-t border-white/[0.04]">
+        <section id="pricing" className="px-6 py-40 border-t border-[#1a1f2e]/[0.08]">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-[12px] text-white/25 mb-4 tracking-widest uppercase">Pricing</p>
-            <h2 className="font-serif text-3xl sm:text-4xl text-white/90 tracking-tight mb-6">
+            <p className="text-[12px] text-[#1a1f2e]/50 mb-4 tracking-widest uppercase">Pricing</p>
+            <h2 className="font-serif text-3xl sm:text-4xl text-[#1a1f2e]/90 tracking-tight mb-6">
               Simple, transparent pricing
             </h2>
-            <p className="text-[15px] text-white/35 max-w-md mx-auto mb-20">
+            <p className="text-[15px] text-[#1a1f2e]/50 max-w-md mx-auto mb-20">
               Choose the engagement model that works best for your needs. No hidden fees, no surprises.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
               {/* Monthly Retainer */}
-              <div className="p-8 rounded-xl border border-white/[0.06] bg-white/[0.01] text-left">
-                <p className="text-[12px] text-white/30 mb-3 tracking-wide uppercase">Monthly retainer</p>
+              <div className="p-8 rounded-xl border border-[#1a1f2e]/[0.08] bg-[#1a1f2e]/[0.02] text-left">
+                <p className="text-[12px] text-[#1a1f2e]/50 mb-3 tracking-wide uppercase">Monthly retainer</p>
                 <div className="flex items-baseline gap-1 mb-4">
-                  <span className="text-3xl font-light text-white/90">$4,200</span>
-                  <span className="text-[13px] text-white/25">/month</span>
+                  <span className="text-3xl font-light text-[#1a1f2e]/90">$4,200</span>
+                  <span className="text-[13px] text-[#1a1f2e]/40">/month</span>
                 </div>
-                <p className="text-[13px] text-white/35 mb-8 leading-relaxed">
+                <p className="text-[13px] text-[#1a1f2e]/50 mb-8 leading-relaxed">
                   Ongoing partnership for brands that need consistent support and growth.
                 </p>
                 <a
                   href="#contact"
-                  className="flex items-center justify-center w-full py-2.5 text-[13px] text-white/60 border border-white/[0.1] rounded-full transition-all duration-200 hover:border-white/25 hover:text-white/90 mb-8"
+                  className="flex items-center justify-center w-full py-2.5 text-[13px] text-[#1a1f2e]/60 border border-[#1a1f2e]/[0.12] rounded-full transition-all duration-200 hover:border-[#1a1f2e]/25 hover:text-[#1a1f2e]/90 mb-8"
                 >
                   Get started
                 </a>
@@ -177,8 +177,8 @@ export default function Page() {
                     "Performance reporting",
                     "Unlimited revisions",
                   ].map((item) => (
-                    <li key={item} className="flex items-center gap-3 text-[13px] text-white/40">
-                      <span className="w-1 h-1 rounded-full bg-[#00D4FF]/40" />
+                    <li key={item} className="flex items-center gap-3 text-[13px] text-[#1a1f2e]/50">
+                      <span className="w-1 h-1 rounded-full bg-[#305CDE]/40" />
                       {item}
                     </li>
                   ))}
@@ -186,18 +186,18 @@ export default function Page() {
               </div>
 
               {/* Project-Based */}
-              <div className="p-8 rounded-xl border border-white/[0.06] bg-white/[0.01] text-left">
-                <p className="text-[12px] text-white/30 mb-3 tracking-wide uppercase">Project-based</p>
+              <div className="p-8 rounded-xl border border-[#1a1f2e]/[0.08] bg-[#1a1f2e]/[0.02] text-left">
+                <p className="text-[12px] text-[#1a1f2e]/50 mb-3 tracking-wide uppercase">Project-based</p>
                 <div className="flex items-baseline gap-1 mb-4">
-                  <span className="text-3xl font-light text-white/90">$5,000</span>
-                  <span className="text-[13px] text-white/25">starting</span>
+                  <span className="text-3xl font-light text-[#1a1f2e]/90">$5,000</span>
+                  <span className="text-[13px] text-[#1a1f2e]/40">starting</span>
                 </div>
-                <p className="text-[13px] text-white/35 mb-8 leading-relaxed">
+                <p className="text-[13px] text-[#1a1f2e]/50 mb-8 leading-relaxed">
                   Focused engagements for specific initiatives, launches, or campaigns.
                 </p>
                 <a
                   href="#contact"
-                  className="flex items-center justify-center w-full py-2.5 text-[13px] text-white/60 border border-white/[0.1] rounded-full transition-all duration-200 hover:border-white/25 hover:text-white/90 mb-8"
+                  className="flex items-center justify-center w-full py-2.5 text-[13px] text-[#1a1f2e]/60 border border-[#1a1f2e]/[0.12] rounded-full transition-all duration-200 hover:border-[#1a1f2e]/25 hover:text-[#1a1f2e]/90 mb-8"
                 >
                   Discuss your project
                 </a>
@@ -209,8 +209,8 @@ export default function Page() {
                     "Final deliverables package",
                     "30-day support included",
                   ].map((item) => (
-                    <li key={item} className="flex items-center gap-3 text-[13px] text-white/40">
-                      <span className="w-1 h-1 rounded-full bg-[#00D4FF]/40" />
+                    <li key={item} className="flex items-center gap-3 text-[13px] text-[#1a1f2e]/50">
+                      <span className="w-1 h-1 rounded-full bg-[#305CDE]/40" />
                       {item}
                     </li>
                   ))}
@@ -221,10 +221,10 @@ export default function Page() {
         </section>
 
         {/* FAQ Section */}
-        <section className="px-6 py-40 border-t border-white/[0.04]">
+        <section className="px-6 py-40 border-t border-[#1a1f2e]/[0.08]">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-[12px] text-white/25 mb-4 tracking-widest uppercase">FAQ</p>
-            <h2 className="font-serif text-3xl sm:text-4xl text-white/90 tracking-tight mb-20">
+            <p className="text-[12px] text-[#1a1f2e]/50 mb-4 tracking-widest uppercase">FAQ</p>
+            <h2 className="font-serif text-3xl sm:text-4xl text-[#1a1f2e]/90 tracking-tight mb-20">
               Common questions
             </h2>
 
@@ -232,23 +232,23 @@ export default function Page() {
               {faqs.map((faq, index) => (
                 <details
                   key={index}
-                  className="group border-b border-white/[0.05] [&:first-child]:border-t"
+                  className="group border-b border-[#1a1f2e]/[0.08] [&:first-child]:border-t"
                 >
                   <summary className="flex items-center justify-between py-6 cursor-pointer list-none">
-                    <span className="text-[14px] text-white/50 group-open:text-white/80 transition-colors duration-200 pr-8">
+                    <span className="text-[14px] text-[#1a1f2e]/50 group-open:text-[#1a1f2e]/80 transition-colors duration-200 pr-8">
                       {faq.question}
                     </span>
-                    <svg 
-                      className="w-4 h-4 text-white/20 group-open:rotate-45 transition-transform duration-200 flex-shrink-0" 
-                      fill="none" 
-                      stroke="currentColor" 
+                    <svg
+                      className="w-4 h-4 text-[#1a1f2e]/20 group-open:rotate-45 transition-transform duration-200 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v16m8-8H4" />
                     </svg>
                   </summary>
                   <div className="pb-6">
-                    <p className="text-[13px] leading-relaxed text-white/35">
+                    <p className="text-[13px] leading-relaxed text-[#1a1f2e]/50">
                       {faq.answer}
                     </p>
                   </div>
@@ -261,7 +261,7 @@ export default function Page() {
         <Contact />
 
         {/* Footer */}
-        <footer className="px-6 py-10 border-t border-white/[0.04]">
+        <footer className="px-6 py-10 bg-[#1a1f2e] border-t border-white/[0.04]">
           <div className="mx-auto max-w-5xl flex flex-col items-center gap-4">
             <span className="font-serif text-[15px] text-white/50">
               Bluecrest Media

@@ -50,14 +50,14 @@ export function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[#14171f]/90 backdrop-blur-xl border-b border-white/[0.05]"
+          ? "bg-[#F5F5DC]/90 backdrop-blur-xl border-b border-[#1a1f2e]/[0.08]"
           : "bg-transparent"
       }`}
     >
       <div className="mx-auto max-w-5xl px-6">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
-            <span className="font-serif text-lg text-white/90 tracking-tight">
+            <span className={`font-serif text-lg tracking-tight transition-colors duration-500 ${scrolled ? "text-[#1a1f2e]/90" : "text-white/90"}`}>
               Bluecrest
             </span>
           </Link>
@@ -67,7 +67,7 @@ export function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-[13px] text-white/40 transition-colors duration-200 hover:text-white/80"
+                className={`text-[13px] transition-colors duration-200 ${scrolled ? "text-[#1a1f2e]/50 hover:text-[#1a1f2e]/80" : "text-white/40 hover:text-white/80"}`}
               >
                 {link.name}
               </Link>
@@ -77,7 +77,7 @@ export function Navbar() {
           <div className="hidden lg:block">
             <a
               href="#contact"
-              className="inline-flex items-center px-4 py-2 text-[13px] text-white/60 border border-white/[0.1] rounded-full transition-all duration-200 hover:border-white/25 hover:text-white/90"
+              className={`inline-flex items-center px-4 py-2 text-[13px] rounded-full transition-all duration-200 ${scrolled ? "text-[#1a1f2e]/60 border border-[#1a1f2e]/[0.12] hover:border-[#1a1f2e]/25 hover:text-[#1a1f2e]/90" : "text-white/60 border border-white/[0.1] hover:border-white/25 hover:text-white/90"}`}
             >
               Get in touch
             </a>
@@ -85,7 +85,7 @@ export function Navbar() {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="flex h-9 w-9 items-center justify-center rounded-full lg:hidden hover:bg-white/[0.04] transition-colors"
+            className={`flex h-9 w-9 items-center justify-center rounded-full lg:hidden transition-colors ${scrolled ? "hover:bg-[#1a1f2e]/[0.06]" : "hover:bg-white/[0.04]"}`}
             aria-label="Toggle menu"
             aria-expanded={isOpen}
           >
@@ -111,7 +111,7 @@ export function Navbar() {
       </div>
 
       <div
-        className={`fixed inset-0 top-16 bg-[#14171f] transition-all duration-400 ease-out lg:hidden ${
+        className={`fixed inset-0 top-16 bg-[#1a1f2e] transition-all duration-400 ease-out lg:hidden ${
           isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
