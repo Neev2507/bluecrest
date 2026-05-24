@@ -75,12 +75,12 @@ export function Navbar() {
           </div>
 
           <div className="hidden lg:block">
-            <Link
-              href="/contact"
+            <a
+              href="#contact"
               className="inline-flex items-center px-4 py-2 text-[13px] text-white/60 border border-white/[0.1] rounded-full transition-all duration-200 hover:border-white/25 hover:text-white/90"
             >
               Get in touch
-            </Link>
+            </a>
           </div>
 
           <button

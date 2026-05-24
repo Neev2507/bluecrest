@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import { Contact } from "@/components/contact"
 
 const leadership = [
   { name: "Atharv Akhaury", title: "Chairman" },
@@ -26,31 +27,26 @@ function AboutNav() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const scrollToContact = () => {
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
+    setIsOpen(false)
+  }
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       scrolled ? "bg-[#14171f]/90 backdrop-blur-xl border-b border-white/[0.05]" : "bg-transparent"
     }`}>
       <div className="mx-auto max-w-5xl px-6">
         <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="font-serif text-lg text-white/90 tracking-tight">
-            Bluecrest
-          </Link>
+          <Link href="/" className="font-serif text-lg text-white/90 tracking-tight">Bluecrest</Link>
           <div className="hidden lg:flex items-center gap-8">
             <Link href="/" className="text-[13px] text-white/40 hover:text-white/80 transition-colors duration-200">Home</Link>
             <Link href="/about" className="text-[13px] text-white/80 transition-colors duration-200">About</Link>
-            <Link href="/contact" className="text-[13px] text-white/40 hover:text-white/80 transition-colors duration-200">Contact</Link>
           </div>
-          <Link
-            href="/contact"
-            className="hidden lg:inline-flex items-center px-4 py-2 text-[13px] text-white/60 border border-white/[0.1] rounded-full transition-all duration-200 hover:border-white/25 hover:text-white/90"
-          >
+          <button onClick={scrollToContact} className="hidden lg:inline-flex items-center px-4 py-2 text-[13px] text-white/60 border border-white/[0.1] rounded-full transition-all duration-200 hover:border-white/25 hover:text-white/90">
             Get in touch
-          </Link>
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="flex h-9 w-9 items-center justify-center rounded-full lg:hidden hover:bg-white/[0.04] transition-colors"
-            aria-label="Toggle menu"
-          >
+          </button>
+          <button onClick={() => setIsOpen(!isOpen)} className="flex h-9 w-9 items-center justify-center rounded-full lg:hidden hover:bg-white/[0.04] transition-colors" aria-label="Toggle menu">
             <div className="flex h-4 w-5 flex-col items-center justify-center gap-[5px]">
               <span className={`h-[1px] bg-white/50 transition-all duration-300 ${isOpen ? "w-5 translate-y-[6px] rotate-45" : "w-5"}`} />
               <span className={`h-[1px] bg-white/50 transition-all duration-300 ${isOpen ? "w-0 opacity-0" : "w-5"}`} />
@@ -63,7 +59,7 @@ function AboutNav() {
         <div className="flex flex-col items-center gap-6 px-6 py-10">
           <Link href="/" onClick={() => setIsOpen(false)} className="text-lg text-white/60 hover:text-white">Home</Link>
           <Link href="/about" onClick={() => setIsOpen(false)} className="text-lg text-white/80">About</Link>
-          <Link href="/contact" onClick={() => setIsOpen(false)} className="text-lg text-white/60 hover:text-white">Contact</Link>
+          <button onClick={scrollToContact} className="text-lg text-white/60 hover:text-white">Get in touch</button>
         </div>
       </div>
     </nav>
@@ -135,18 +131,7 @@ export default function About() {
           </div>
         </section>
 
-        <section className="px-6 py-40 border-t border-white/[0.04]">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-serif text-3xl sm:text-4xl text-white/90 tracking-tight mb-6">Ready to work together?</h2>
-            <p className="text-[15px] text-white/35 mb-12">Tell us about your brand and let's build something that lasts.</p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-6 py-2.5 text-[14px] text-white/70 border border-white/[0.12] rounded-full transition-all duration-200 hover:border-white/30 hover:text-white"
-            >
-              Get in touch
-            </Link>
-          </div>
-        </section>
+        <Contact />
 
         <footer className="px-6 py-10 border-t border-white/[0.04]">
           <div className="mx-auto max-w-5xl flex flex-col items-center gap-4">

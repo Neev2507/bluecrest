@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/navbar"
+import { Contact } from "@/components/contact"
 
 const works = [
   {
@@ -257,26 +258,7 @@ export default function Page() {
           </div>
         </section>
 
-        {/* Contact CTA */}
-        <section id="contact" className="px-6 py-40 border-t border-white/[0.04]">
-          <div className="mx-auto max-w-2xl text-center">
-            <p className="text-[12px] text-white/25 mb-4 tracking-widest uppercase">Get in touch</p>
-            <h2 className="font-serif text-3xl sm:text-4xl text-white/90 tracking-tight mb-6">
-              Ready to start your project?
-            </h2>
-            <p className="text-[15px] text-white/35 mb-12">
-              Tell us about your goals and we&apos;ll show you how we can help.
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              <a
-                href="mailto:hello@bluecrestmedia.com"
-                className="inline-flex items-center px-6 py-2.5 text-[14px] text-white/70 border border-white/[0.12] rounded-full transition-all duration-200 hover:border-white/30 hover:text-white"
-              >
-                hello@bluecrestmedia.com
-              </a>
-            </div>
-          </div>
-        </section>
+        <Contact />
 
         {/* Footer */}
         <footer className="px-6 py-10 border-t border-white/[0.04]">
@@ -285,7 +267,7 @@ export default function Page() {
               Bluecrest Media
             </span>
             <p className="text-[11px] text-white/20">
-              &copy; 2026 Bluecrest Media. All rights reserved.
+              &copy; 2025 Bluecrest Media. All rights reserved.
             </p>
           </div>
         </footer>
