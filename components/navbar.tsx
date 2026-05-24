@@ -4,9 +4,9 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 
 const navLinks = [
-  { name: "Services", href: "#services" },
-  { name: "Work", href: "#work" },
-  { name: "Pricing", href: "#pricing" },
+  { name: "Services", href: "/#services" },
+  { name: "Work", href: "/#work" },
+  { name: "Pricing", href: "/#pricing" },
   { name: "About", href: "/about" },
 ]
 
@@ -141,13 +141,13 @@ export function Navbar() {
               transform: isOpen ? "translateY(0)" : "translateY(-10px)",
             }}
           >
-            <Link
-              href="/contact"
+            <a
+              href="#contact"
               onClick={() => setIsOpen(false)}
               className="inline-flex items-center px-6 py-2.5 text-[14px] text-white/70 border border-white/[0.1] rounded-full transition-all duration-200 hover:border-white/25 hover:text-white"
             >
               Get in touch
-            </Link>
+            </a>
           </div>
         </div>
       </div>
